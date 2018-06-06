@@ -1,36 +1,14 @@
 import React, { Component } from 'react';
+import singleton from '../src/singleton';
 
-function log(target, name, descriptor) {
-    let message = `LOG: Calling \`${name}\` function.`;
-  
-    if (typeof target === 'string') {
-      message = target;
-  
-      return (target, name, descriptor) => {
-        console.log(`LOG: ${message}`, name);
-        return descriptor;
-      };
-    } else {
-      console.log(message);
-      return descriptor;
-    }
-  }
-
-@log
-function x() {
-    console.log('x');
-}
-
-x();
-
+@singleton
 export default class Hello extends Component {
-    @log
-    x() {
-        console.log('xx');
-    }
+    // constructor() {
+    //   super();
+    //   this.state = {};
+    // }
 
     render() {
-        this.x();
         return (
             <div>
                 hello world!
