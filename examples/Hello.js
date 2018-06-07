@@ -3,15 +3,11 @@ import singleton from '../src/singleton';
 
 @singleton
 export default class Hello extends Component {
-    // constructor() {
-    //   super();
-    //   this.state = {};
-    // }
-
     render() {
+        const { name } = this.props;
         return (
-            <div>
-                hello world!
+            <div onClick={() => this.hide()}>
+                {name}, hello world!
             </div>
         )
     }

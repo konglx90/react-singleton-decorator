@@ -5,17 +5,23 @@ export default function singleton(Target) {
     let dom;
     let instance;
 
-    Target.show = (option = {}) => {
+    const show  = (option = {}) => {
         if(!dom) {
             dom = document.createElement('div');
             document.body.appendChild(dom);
         }
-        instance = render(<Target />, dom);
+        instance = render(<Target {...option} />, dom);
     }
 
-    Target.hide = () => {
+    const hide = () => {
         if (dom) {
-          unmountComponentAtNode(dom);
-        }
+            unmountComponentAtNode(dom);
+          }
     }
+
+    Target.prototype.show = show;
+    Target.prototype.hide = hide;
+
+    Target.show = show;
+    Target.hide = hide;
 }

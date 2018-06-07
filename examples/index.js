@@ -7,7 +7,12 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <div onClick={() => Hello.show()}>creare hello world.</div>
+                <div onClick={() => Hello.show({
+                    name: 'dog'
+                })}>creare hello world. dog</div>
+                <div onClick={() => Hello.show({
+                    name: 'cat'
+                })}>creare hello world. cat</div>
                 <div onClick={() => Hello.hide()}>delete hello world</div>
             </div>
         )
