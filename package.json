@@ -1,6 +1,6 @@
 {
   "name": "react-singleton-decorator",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/singleton.js",
   "scripts": {
@@ -10,10 +10,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
@@ -23,6 +20,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "parcel-bundler": "^1.8.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   }
 }
