@@ -2,7 +2,7 @@
 
 ### Basic
 
-You at least have these configs in `.babelrc` and install them.
+At least you need have these configs in `.babelrc` and install them.
 
 ```js
 // .babelrc
@@ -34,7 +34,7 @@ class Hello extends Component {
         const { name } = this.props;
         return (
             <div onClick={() => this.hide()}>
-                {name}, hello world!
+                Hello, {name}!
             </div>
         )
     }
@@ -46,9 +46,9 @@ Hello.show({
 Hello.hide();
 ```
 
-### Can use in
+### Can use on
 
-```js
+```sh
 Alert
 
 Modal
