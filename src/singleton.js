@@ -15,8 +15,9 @@ export default function singleton(Target) {
 
     const hide = () => {
         if (dom) {
-            unmountComponentAtNode(dom);
-          }
+          unmountComponentAtNode(dom);
+          // instance = null;
+        }
     }
 
     Target.prototype.show = show;
