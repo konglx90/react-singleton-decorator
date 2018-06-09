@@ -13,10 +13,18 @@ export default class Hello extends Component {
     componentWillUpdate(nextProps) {
       console.log(this.props, nextProps);
     }
+    show() {
+      console.log('show: ', this.props);
+      // WARNING: It will be dead circle
+      // Hello.show();
+    }
+    hide() {
+      console.log('hide');
+    }
     render() {
         const { name } = this.props;
         return (
-            <div onClick={() => this.hide()}>
+            <div onClick={() => Hello.hide()}>
                 {name}, hello world!
             </div>
         )
